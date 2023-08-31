@@ -1,0 +1,42 @@
+<div class="card p-4" style="max-width: 400px;">
+  <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+    
+    <div class="mb-3">
+      <label for="name" class="form-label text-left">Name:</label>
+      <input type="text" id="name" formControlName="name" class="form-control" [class.is-invalid]="registrationForm.get('name')?.invalid && registrationForm.get('name')?.touched" required>
+      <div *ngIf="registrationForm.get('name')?.invalid && registrationForm.get('name')?.touched" class="invalid-feedback">
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <label for="email" class="form-label text-left">Email:</label>
+      <input type="email" id="email" formControlName="email" class="form-control" [class.is-invalid]="registrationForm.get('email')?.invalid && registrationForm.get('email')?.touched" required>
+      <div *ngIf="registrationForm.get('email')?.invalid && registrationForm.get('email')?.touched" class="invalid-feedback">
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <label for="mobile" class="form-label text-left">Mobile:</label>
+      <input type="tel" id="mobile" formControlName="mobile" class="form-control" [class.is-invalid]="registrationForm.get('mobile')?.invalid && registrationForm.get('mobile')?.touched" required>
+      <div *ngIf="registrationForm.get('mobile')?.invalid && registrationForm.get('mobile')?.touched" class="invalid-feedback">
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <label for="username" class="form-label text-left">Username:</label>
+      <input type="text" id="username" formControlName="username" class="form-control" [class.is-invalid]="registrationForm.get('username')?.invalid && registrationForm.get('username')?.touched" >
+      <div *ngIf="registrationForm.get('username')?.invalid && registrationForm.get('username')?.touched" class="invalid-feedback">
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <label for="password" class="form-label text-left">Password:</label>
+      <input type="password" id="password" formControlName="password" class="form-control" [class.is-invalid]="registrationForm.get('password')?.invalid && registrationForm.get('password')?.touched" >
+      <div *ngIf="registrationForm.get('password')?.invalid && registrationForm.get('password')?.touched" class="invalid-feedback">
+      </div>
+    </div>
+
+    <button type="submit" class="btn btn-primary" [disabled]="registrationForm.invalid">Sign Up</button>
+    
+  </form>
+</div>

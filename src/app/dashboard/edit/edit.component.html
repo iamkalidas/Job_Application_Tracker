@@ -1,0 +1,50 @@
+<div class="container d-flex justify-content-center align-items-center vh-100">
+  <div class="card p-4" style="width: 400px;">
+    <h2 class="text-center mb-4">Edit Job Application</h2>
+
+    <form [formGroup]="editForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="dateApplied">Date Applied:</label>
+        <input type="date" id="dateApplied" formControlName="dateApplied" class="form-control" required>
+      </div>
+
+      <div class="form-group">
+        <label for="company">Company:</label>
+        <input type="text" id="company" formControlName="company" class="form-control" required>
+      </div>
+
+      <div class="form-group">
+        <label for="position">Position:</label>
+        <input type="text" id="position" formControlName="position" class="form-control" required>
+      </div>
+
+      <div class="form-group">
+        <label for="applicationMethod">Application Method:</label>
+        <input type="text" id="applicationMethod" formControlName="applicationMethod" class="form-control">
+      </div>
+
+      <div class="form-group">
+        <label for="contactInfo">Contact Info:</label>
+        <input type="text" id="contactInfo" formControlName="contactInfo" class="form-control">
+      </div>
+
+      <div class="form-group">
+        <label for="status">Status:</label>
+        <input type="text" id="status" formControlName="status" class="form-control">
+      </div>
+
+      <div class="form-group">
+        <label for="notes">Notes:</label>
+        <textarea id="notes" formControlName="notes" class="form-control"></textarea>
+      </div>
+
+      <div class="d-flex justify-content-center">
+        <button type="submit" class="btn btn-primary mx-2">Update Application</button>
+        <button type="submit" class="btn btn-primary mx-2" (click)="cancelEdit()">Cancel</button>
+      </div>  
+          
+    </form>
+  </div>
+</div>
+
+

@@ -1,0 +1,20 @@
+<div class="container d-flex justify-content-center align-items-center vh-100">
+  <div class="card p-4" style="max-width: 400px; width: 100%;">
+    <h2 class="text-center mb-4">Job Application Details</h2>
+
+    <div class="card-body" *ngIf="application">
+      <div class="mb-4">
+        <p class="fs-5"><strong class="text-custom-color">Application Id:</strong> {{ application.id }}</p>
+        <p class="fs-5"><strong class="text-custom-color">Company:</strong> {{ application.company }}</p>
+        <p class="fs-5"><strong class="text-custom-color">Position:</strong> {{ application.position }}</p>
+        <p class="fs-5"><strong class="text-custom-color">Date Applied:</strong> {{ application.dateApplied | date }}</p>
+        <p class="fs-5"><strong class="text-custom-color">Application Method:</strong> {{ application.applicationMethod }}</p>
+        <p class="fs-5"><strong class="text-custom-color">Contact Info:</strong> {{ application.contactInfo }}</p>
+        <p class="fs-5"><strong class="text-custom-color">Status:</strong> {{ application.status }}</p>
+        <p class="fs-5"><strong>Notes:</strong> {{ application.notes }}</p>
+      </div>
+    </div>
+    
+      <button class="btn btn-primary btn-block" (click)="cancelView()">Okay</button>
+    </div>
+</div>

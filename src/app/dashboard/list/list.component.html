@@ -1,0 +1,14 @@
+<div class="d-flex justify-content-center align-items-center vh-100">
+  <div class="col-10 col-md-8 col-lg-6 border border-primary p-4 text-center">
+    <h2>Job Applications</h2>
+
+    <button (click)="navigateToAdd()" class="btn btn-primary mt-3">Add Application</button>
+
+    <ul class="list-group mt-3">
+      <li *ngFor="let application of applications" class="list-group-item">
+        <a (click)="navigateToDetails(application.id)" class="text-decoration-none">{{ application.position }} at {{ application.company }}</a>
+      </li>
+    </ul>
+
+  </div>
+</div>

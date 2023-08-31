@@ -1,0 +1,54 @@
+<div class="container mt-5 d-flex justify-content-center">
+  <div class="card p-4" style="max-width: 400px; width: 100%;">
+    <h2 class="text-center mb-4">Add New Job Application</h2>
+
+    <form [formGroup]="addForm" (ngSubmit)="onSubmit()">
+      
+      <!-- <div class="mb-3">
+        <label for="userId" class="form-label">UserId:</label>
+        <input type="number" id="userId" formControlName="userId" class="form-control" required>
+      </div> -->
+
+      <div class="mb-3">
+        <label for="dateApplied" class="form-label">Date Applied:</label>
+        <input type="date" id="dateApplied" formControlName="dateApplied" class="form-control" required>
+      </div>
+
+      <div class="mb-3">
+        <label for="company" class="form-label">Company:</label>
+        <input type="text" id="company" formControlName="company" class="form-control" required>
+      </div>
+
+      <div class="mb-3">
+        <label for="position" class="form-label">Position:</label>
+        <input type="text" id="position" formControlName="position" class="form-control" required>
+      </div>
+
+      <div class="mb-3">
+        <label for="applicationMethod" class="form-label">Application Method:</label>
+        <input type="text" id="applicationMethod" formControlName="applicationMethod" class="form-control">
+      </div>
+
+      <div class="mb-3">
+        <label for="contactInfo" class="form-label">Contact Info:</label>
+        <input type="text" id="contactInfo" formControlName="contactInfo" class="form-control">
+      </div>
+
+      <div class="mb-3">
+        <label for="status" class="form-label">Status:</label>
+        <input type="text" id="status" formControlName="status" class="form-control">
+      </div>
+
+      <div class="mb-3">
+        <label for="notes" class="form-label">Notes:</label>
+        <textarea id="notes" formControlName="notes" class="form-control"></textarea>
+      </div>
+      
+      <div class="d-flex justify-content-center">
+        <button type="submit" class="btn btn-primary">Add Application</button>
+        <button type="submit" class="btn btn-primary mx-2" (click)="cancelAddApp()">Cancel</button>
+      </div>
+      
+    </form>
+  </div>
+</div>
