@@ -37,7 +37,6 @@ export class DashboardComponent implements OnInit {
   }
 
   logout() {
-    // this.authservice.logout();
     this.authservice.isLoggedIn = false;
     localStorage.clear();
     console.log('logged out');
