@@ -9,6 +9,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
+import { MatPaginatorModule } from '@angular/material/paginator';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home/home.component';
@@ -47,7 +48,8 @@ import { ModalComponent } from './modal/modal/modal.component';
     BrowserAnimationsModule,
     MatButtonModule,
     MatInputModule,
-    NgbModule
+    NgbModule,
+    MatPaginatorModule
   ],
 
   providers: [

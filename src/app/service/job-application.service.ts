@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { JobApplication } from '../dashboard/job-application.model';
 
@@ -36,5 +36,11 @@ export class JobApplicationService {
   deleteApplication(id: number): Observable<void> {
     const url = `${this.baseUrl}/${id}`;
     return this.http.delete<void>(url);
+  }
+
+  // Add a new method to fetch paginated applications
+  getPaginatedApplications(page: number, size: number): Observable<JobApplication[]> {
+    const params = new HttpParams().set('page', page.toString()).set('size', size.toString());
+    return this.http.get<JobApplication[]>(`${this.baseUrl}/paged`, { params });
   }
 }
