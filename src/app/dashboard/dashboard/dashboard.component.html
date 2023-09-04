@@ -35,7 +35,8 @@
     <tbody>
       <tr *ngFor="let application of applications; let i = index">
         <td class="text-center">{{ serialCounter + i }}</td>
-        <td class="text-center">{{ application.id }}</td>
+        <!-- <td class="text-center">{{ application.id }}</td> -->
+        <td class="text-center">App{{ application.id < 10 ? '0' + application.id : application.id }}</td>
         <td class="text-center">{{ application.company }}</td>
         <td class="text-center">{{ application.position }}</td>
         <td class="text-center">{{ application.status }}</td>
