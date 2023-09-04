@@ -114,6 +114,7 @@ export class DashboardComponent implements OnInit {
   deleteApplication(id: number) {
     this.applicationService.deleteApplication(id).subscribe(() => {
       this.applications = this.applications.filter((app) => app.id !== id); // Remove the deleted application from the list
+      this.fetchApplications();
     });
   }
 
